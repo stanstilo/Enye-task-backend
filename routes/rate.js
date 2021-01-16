@@ -8,14 +8,14 @@ router.route('/rates').get((req, res)=>{
          res.status(202).send({
           results:{
             "base":data.base,
-            "date":new Date(),
+            "date":data.date,
              "rates":{
                 "EUR":data.rates.EUR,
                 "GBP":data.rates.GBP,
                 "USD":data.rates.USD,
              }
           }
-       }))
+       })).catch(err =>console.log('error' + err))
 })
 
 
