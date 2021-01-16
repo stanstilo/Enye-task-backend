@@ -6,7 +6,7 @@ router.route('/rates').get((req, res)=>{
     fetch(url).then(res=>
       res.json()).then(data=>
          res.status(202).send({
-          rates:{
+          results:{
             "base":data.rates.base,
             "date":data,
              "rates":{
