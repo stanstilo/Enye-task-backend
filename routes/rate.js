@@ -7,8 +7,8 @@ router.route('/rates').get((req, res)=>{
       res.json()).then(data=>
          res.status(202).send({
           results:{
-            "base":data.rates.base,
-            "date":data,
+            "base":data.base,
+            "date":new Date(),
              "rates":{
                 "EUR":data.rates.EUR,
                 "GBP":data.rates.GBP,
